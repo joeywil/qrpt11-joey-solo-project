@@ -12,9 +12,7 @@ const driver: WebDriver = new Builder()
   .build();
 
 class OnePlus extends BasePage {
-  
-}
-
+  };
 const pageObject = new onePlusPageObjects(driver);
 jest.setTimeout(20000);
 

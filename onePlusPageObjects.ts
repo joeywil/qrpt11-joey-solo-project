@@ -12,6 +12,12 @@ export class onePlusPageObjects extends BasePage {
         oneplus10pro: By = By.xpath('//*[@id="page-accessory-list"]/div/section/div/div[2]/div[4]/div/div/div[5]/a/div[2]/div[1]/span');
         oneplus11: By = By.xpath(`//*[@id="page-accessory-list"]/div/section/div/div[2]/div[4]/div/div/div[2]/a/div[2]/div[1]/span`);
         NordN305G: By = By.xpath(`//*[@id="page-accessory-list"]/div/section/div/div[2]/div[4]/div/div/div[1]/a/div[2]/div[1]/span`);
+        accessories: By = By.xpath('(//li[@class="page hidden-in-bbs-app"])[4]');
+        casesandProtection: By = By.xpath(`//*[@id="page-accessory-list"]/div/section/section/div/ul/div/li[7]/a/img[1]`);
+        caseOnePlus9Pro: By = By.xpath(`//*[@id="sort-checkbox"]/div/div[1]/div[1]/div[4]/div/label`);
+        caseOnePlus8: By = By.xpath(`//*[@id="sort-checkbox"]/div/div[1]/div[1]/div[6]/div/label/span`);
+        viewMore: By = By.xpath(`(//div[@class="show-more"])`);
+        caseOnePlusN10: By = By.xpath(`(//div[@class="field"])[7]`);
         //Colors
         eternalgreen:By = By.xpath(`//*[@id="phoneInfoStart"]/div[1]/div[2]/div[2]`);
         volcanicblack: By = By.xpath('//*[@id="phoneInfoStart"]/div[1]/div[2]/div[1]/div/img');
@@ -59,9 +65,11 @@ export class onePlusPageObjects extends BasePage {
         //Sign in selectors
         accntBtn: By = By.xpath(`//*[@id="show-user-info"]`);
         incrtAcctPswdMsg: By = By.xpath(`/html/body/div[2]/div[2]/div[2]/div/div/div[2]/div[2]/form/div[4]/div`);
-        sgninEmail: By = By.xpath(`/html/body/div[2]/div[2]/div[2]/div/div/div[2]/div[2]/form/div[1]/div/input`);
+        sgninEmail: By = By.xpath('(//div[@class="input_inner__9pf0en false"])[2]');
         sgninPsswrd: By = By.xpath(`/html/body/div[2]/div[2]/div[2]/div/div/div[2]/div[2]/form/div[2]/div[1]`);
         sgninBtn: By = By.xpath(`/html/body/div[2]/div[2]/div[2]/div/div/div[2]/div[2]/form/div[5]/button[1]`);
+        googlesignin: By = By.xpath('/html/body/div[2]/div[2]/div[2]/div/div/div[2]/div[7]/div[2]/div[3]')
+
         //Support page selectors
         supportLink: By = By.xpath(`//*[@id="nav-pages-slide"]/div[1]/ul/li[5]/a/span`);
         supportSearch: By = By.xpath('(//div[@class="el-pc-input relative el-input el-input--prefix el-input--suffix"])');

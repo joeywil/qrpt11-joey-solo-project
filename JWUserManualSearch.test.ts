@@ -37,7 +37,7 @@ const fs = require('fs');
     console.log("Is user manual download link visible?", onePlus11UMDLDisplayed);
     expect(onePlus11UMDLDisplayed).toBe(true);
     //Take a screenshot and log its success.
-    fs.writeFile(`${__dirname}/UserManual.png`,
+    fs.writeFile(`${__dirname}/Screenshots/User Manual/UserManual.png`,
     await pageObject.driver.takeScreenshot(), "base64", 
     (e =>{
         if (e) console.log(e);

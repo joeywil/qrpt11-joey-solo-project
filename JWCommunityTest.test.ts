@@ -41,7 +41,7 @@ const fs = require('fs');
     await pageObject.click(pageObject.communityShare);
     await pageObject.click(pageObject.copyLink);
     //Take a screenshot
-    fs.writeFile(`${__dirname}/CommunityShare.png`,
+    fs.writeFile(`${__dirname}/Screenshots/Community/CommunityShare.png`,
     await pageObject.driver.takeScreenshot(), "base64", 
     (e =>{
         if (e) console.log(e);

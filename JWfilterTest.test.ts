@@ -28,11 +28,11 @@ const fs = require('fs');
     await pageObject.click(pageObject.nordSeries);
     await pageObject.click(pageObject.filter464);
     await sleep(1000);
-    fs.writeFile(`${__dirname}/NothingFoundErrorPage.png`,
+    fs.writeFile(`${__dirname}/Screenshots/Filter Test/NothingFoundErrorPage.png`,
     await pageObject.driver.takeScreenshot(), "base64", 
     (e =>{
         if (e) console.log(e);
-        else console.log("Nothing Found Error Message.")
+        else console.log("Screenshot Success!.")
     }));
     await pageObject.driver.wait(until.elementLocated(pageObject.nothiongFoundMsg));
     const nothiongFoundMsgElement = await pageObject.driver.findElement(pageObject.nothiongFoundMsg);

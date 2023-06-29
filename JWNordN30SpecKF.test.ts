@@ -51,7 +51,7 @@ const fs = require('fs');
      console.log(`Text not found in the popup: ${searchText}`);
    }
     //Take a screenshot
-    fs.writeFile(`${__dirname}/NordN30KeyFeatures.png`,
+    fs.writeFile(`${__dirname}/Screenshots/Nord N30 Key Features/NordN30KeyFeatures.png`,
     await pageObject.driver.takeScreenshot(), "base64", 
     (e =>{
         if (e) console.log(e);
