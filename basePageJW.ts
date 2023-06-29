@@ -57,4 +57,15 @@ export class BasePage {
         await this.driver.wait(until.elementLocated(elementBy));
         return this.driver.findElement(elementBy);
     };
+    async switchTabs() {
+        let currentTabs = await this.driver.getAllWindowHandles();
+        await this.driver.switchTo().window(currentTabs[1]);
+        await this.driver.sleep(1500);
+        
+    };
+    async repeatClick(num, elementBy) {
+        for (let i = 0; i < num; i++){
+            await this.click(elementBy);
+        }
+    }
 };

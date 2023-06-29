@@ -23,7 +23,7 @@ describe("OnePlus Test", () => {
 const fs = require('fs');
   test("Testing phone filter results.", async () => {
    
-    await pageObject.click(pageObject.store); 
+    
     await pageObject.click(pageObject.phones);
     await pageObject.click(pageObject.nordSeries);
     await pageObject.click(pageObject.filter464);
@@ -34,10 +34,10 @@ const fs = require('fs');
         if (e) console.log(e);
         else console.log("Nothing Found Error Message.")
     }));
-    const elementExists = await driver.findElements(pageObject.nothiongFound);
-    expect(elementExists.length).toBe(0);
-    return elementExists.length === 0; 
-    
-   
+    await pageObject.driver.wait(until.elementLocated(pageObject.nothiongFoundMsg));
+    const nothiongFoundMsgElement = await pageObject.driver.findElement(pageObject.nothiongFoundMsg);
+    const nothiongFoundMsgDisplayed = await nothiongFoundMsgElement.isDisplayed();
+    console.log("Is 'Nothing Found' message displayed?", nothiongFoundMsgDisplayed);
+    expect(nothiongFoundMsgDisplayed).toBe(true);
   })});
 
