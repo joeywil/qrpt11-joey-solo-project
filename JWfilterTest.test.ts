@@ -4,10 +4,12 @@ import { onePlusPageObjects } from "./onePlusPageObjects";
 function sleep(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 };
+
 //This test filters the phones so none meet the criteria and then verifies the error message is the and takes a screenshot.
 const driver: WebDriver = new Builder()
   .withCapabilities(Capabilities.chrome())
   .build();
+
 
 const pageObject = new onePlusPageObjects(driver);
 jest.setTimeout(20000);

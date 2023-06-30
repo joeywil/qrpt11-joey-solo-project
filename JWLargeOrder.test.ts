@@ -39,6 +39,7 @@ describe("OnePlus Test", () => {
     await pageObject.click(pageObject.QtyPlus1);
     await pageObject.sendKeys(pageObject.miniCartQty, "100\n");
    //Verifying "Limit 10 per order" message recieved.
+    await sleep(1500);
     await pageObject.driver.wait(until.elementLocated(pageObject.limit10PerDayMsg));
     const limitMsgElement = await pageObject.driver.findElement(pageObject.limit10PerDayMsg);
     const isLimitMsgDisplayed = await limitMsgElement.isDisplayed();
@@ -51,6 +52,7 @@ describe("OnePlus Test", () => {
     await pageObject.click(pageObject.QtyPlus1);
     await pageObject.click(pageObject.QtyPlus1);
     //Verifying "Limit 4 per order" message recieved.
+    await sleep(1500);
     await pageObject.driver.wait(until.elementLocated(pageObject.limit4PerDayMsg));
     const limit4MsgElement = await pageObject.driver.findElement(pageObject.limit4PerDayMsg);
     const isLimit4MsgDisplayed = await limit4MsgElement.isDisplayed();
